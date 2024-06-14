@@ -17,3 +17,6 @@ Gender:
 
 <form method="post" action="test_form.php">
 <form method="post" action="test_form.php/"><script>alert('hacked')</script>
+<?php $fruits =$_POST["fruits"];
+echo $fruits[0];
+?>
