@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlavorFiesta - Success Stories</title>
+    <style>
+        *{
+            text-decoration: none;
+        }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+        display: flex;
+        justify-content: space-evenly;
+           align-items: center;
+           background-color: rgb(241, 199, 147);
+           height: 80px;
+           
+        }
+        nav ul {
+            display: flex;
+            font-size: 18px;
+
+        }
+        nav ul li{
+            margin-left: 50px;
+            list-style: none;
+            
+        }
+        nav ul li a{
+            color: black;
+        }
+        nav img{
+            height: 150px;
+            width: 250px;
+        }
+        .ul1{
+            margin-left: -20px;
+        }
+        nav button{
+            height: 30px;
+            width: 120px;
+            background-color: black;
+            color: white;
+            border-radius: 20px;
+            margin-top: -10px;
+        }
+        .dropdown{
+            background-color: rgb(241, 199, 147);
+            width:  100px;
+            z-index: 1;
+            display: none;
+            position: absolute;
+        }
+        .dropdown a{
+            display: block;
+            padding-bottom: 10px;
+        }
+        .navitem:hover .dropdown{
+            display: block;
+        }
+        nav a:hover{
+            font-size: 20px;
+        }
+        nav ion-icon{
+            font-size: 25px;
+        }
+
+.success-stories-container {
+    text-align: center;
+    padding: 2em;
+}
+
+.success-stories-container h1 {
+    margin-bottom: 1.5em;
+}
+
+.story {
+    background-color: #f9f9f9;
+    padding: 2.5em 3em;
+    margin: 4em 0;
+    border-radius: 8px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    transition: transform 0.5s ease;
+    width: 1050px;
+}
+
+.story:hover{
+    transform: scale(1.1);
+}
+.story img{
+    border-radius: 5%;
+}
+.testimonial1{
+    width: 600px;
+}
+
+.story h2 {
+    margin-bottom: 0.5em;
+}
+
+.story p {
+    font-size: 1.1em;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul class="ul1">
+            <li><a href="">Home</a></li>
+            <li class="navitem"><a href="">Recipies</a>
+                <div class="dropdown">
+                    <a href="">Recipies</a>
+                    <a href="">Tutorials</a>
+                    <a href="">live classes</a>
+                </div>
+            </li>
+            <li><a href="">Restaurants</a></li>
+        </ul>
+        <a href=""><img src="../images/logo.png" alt=""></a>
+        <ul class="ul2">
+            <li><a href="">Schedule</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Reviews</a></li>
+            <li><a href=""><button>Subscribe</button></a></li>
+            <li><a href=""><a href=""><ion-icon name="menu"></ion-icon></a></a></li>
+        </ul> 
+    </nav>
+
+    <!-- Success Stories Section -->
+    <div class="success-stories-container">
+        <h1>Success Stories</h1>
+        <div class="story">
+            <img src="../images/img8.jfif" height="200px" width="300px">
+            <div class="testimonial1">
+                <h2>John's Journey to Gourmet Cooking</h2>
+                <p>John started as a beginner, struggling to cook basic meals. With FlavorFiesta, he learned new techniques, tried different cuisines, and now impresses his friends and family with gourmet dishes.</p>
+            </div>
+        </div>
+        <div class="story">
+            <img src="../images/img9.jfif" height="200px" width="300px">
+            <div class="testimonial1">
+                <h2>Emily's Healthy Eating Transformation</h2>
+                <p>Emily wanted to adopt a healthier lifestyle. FlavorFiesta provided her with nutritious recipes and meal plans that fit her busy schedule. She's now enjoying delicious, healthy meals every day.</p>
+            </div>
+        </div>
+        <div class="story">
+            <img src="../images/img10.jpg" height="200px" width="300px">
+            <div class="testimonial1">
+                <h2>Mike's Baking Adventures</h2>
+                <p>Mike had always been interested in baking but didn't know where to start. With FlavorFiesta's step-by-step guides and video tutorials, he has become an expert baker, creating stunning cakes and pastries.</p>
+            </div>
+        </div>
+        <div class="story">
+            <img src="../images/img11.jpg" height="200px" width="300px">
+            <div class="testimonial1">
+                <h2>manish Baking Adventures</h2>
+                <p>Mike had always been interested in baking but didn't know where to start. With FlavorFiesta's step-by-step guides and video tutorials, he has become an expert baker, creating stunning cakes and pastries.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 FlavorFiesta. All rights reserved.</p>
+    </footer>
+</body>
+</html>

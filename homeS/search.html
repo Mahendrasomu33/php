@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlavorFiesta - Search</title>
+    <link rel="stylesheet" href="search.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">FlavorFiesta</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search for recipes, restaurants, or food articles...">
+        <button onclick="performSearch()">Search</button>
+    </div>
+
+    <!-- Search Results -->
+    <div id="results">
+        <h2>Search Results</h2>
+        <div id="recipes-results"></div>
+        <div id="restaurants-results"></div>
+        <div id="articles-results"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 FlavorFiesta. All rights reserved.</p>
+    </footer>
+
+    <script src="search.js"></script>
+</body>
+</html>

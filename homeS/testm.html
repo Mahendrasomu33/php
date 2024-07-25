@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlavorFiesta - Testimonials</title>
+    <link rel="stylesheet" href="testimonials.css">
+</head>
+<style>
+    *{
+        text-decoration: none;
+    }
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: rgb(241, 199, 147);
+        height: 80px;
+           
+        }
+        nav ul {
+            display: flex;
+            font-size: 18px;
+
+        }
+        nav ul li{
+            margin-left: 50px;
+            list-style: none;
+            
+        }
+        nav ul li a{
+            color: black;
+        }
+        nav img{
+            height: 150px;
+            width: 250px;
+        }
+        .ul1{
+            margin-left: -20px;
+        }
+        nav button{
+            height: 30px;
+            width: 120px;
+            background-color: black;
+            color: white;
+            border-radius: 20px;
+            margin-top: -10px;
+        }
+        .dropdown{
+            background-color: rgb(241, 199, 147);
+            width:  100px;
+            z-index: 1;
+            display: none;
+            position: absolute;
+        }
+        .dropdown a{
+            display: block;
+            padding-bottom: 10px;
+        }
+        .navitem:hover .dropdown{
+            display: block;
+        }
+        nav a:hover{
+            font-size: 20px;
+        }
+        nav ion-icon{
+            font-size: 25px;
+        }
+
+.testimonials-container {
+    text-align: center;
+    padding: 2em;
+}
+
+.testimonials-container h1 {
+    margin-bottom: 1.5em;
+}
+
+.testimonial {
+    background-color: #f9f9f9;
+    padding: 1.5em;
+    margin: 1em 0;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+}
+.testimonial img{
+    border-radius: 5%;
+}
+.testimonial img:hover{
+    border-radius: 5%;
+    background-color: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 1s;
+}
+
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:100px; top:0px;}
+  50%  {background-color:blue; left:10px; top:0px;}
+  75%  {background-color:green; left:0px; top:0px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+.testimonial p {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.testimonial h3 {
+    color: #050303;
+    font-size: 25px;
+}
+
+</style>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul class="ul1">
+            <li><a href="">Home</a></li>
+            <li class="navitem"><a href="">Recipies</a>
+                <div class="dropdown">
+                    <a href="">Recipies</a>
+                    <a href="">Tutorials</a>
+                    <a href="">live classes</a>
+                </div>
+            </li>
+            <li><a href="">Restaurants</a></li>
+        </ul>
+        <a href=""><img src="../images/logo.png" alt=""></a>
+        <ul class="ul2">
+            <li><a href="">Schedule</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Reviews</a></li>
+            <li><a href=""><button>Subscribe</button></a></li>
+            <li><a href=""><a href=""><ion-icon name="menu"></ion-icon></a></a></li>
+        </ul> 
+    </nav>
+
+    <!-- Testimonials Section -->
+    <div class="testimonials-container">
+        <h1>Customer Testimonials reviews </h1>
+        <div class="testimonial">
+            <img src="../images/img1.jfif" width="30%" height="400">
+            <p>"FlavorFiesta has completely transformed my cooking experience! The recipes are easy to follow and absolutely delicious."</p>
+            <h3>- Sarah J.</h3>
+        </div>
+        <div class="testimonial">
+            <img src="../images/img2.jfif" width="30%" height="400">
+            <p>"I love the variety of recipes available on FlavorFiesta. There's something for every occasion and dietary preference."</p>
+            <h3>- Michael T.</h3>
+        </div>
+        <div class="testimonial">
+            <img src="../images/img3.jpg" width="30%" height="400">
+            <p>"The meal planning tool is a game-changer! It makes grocery shopping and meal prep so much easier."</p>
+            <h3>- Emily R.</h3>
+        </div>
+        <div class="testimonial">
+            <img src="../images/img5.jfif" width="30%" height="400">
+            <p>“Food brings people together on many different levels. It’s nourishment of the soul and body; it’s truly love.”</p>
+            <h3>- Krish V.</h3>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 FlavorFiesta. All rights reserved.</p>
+    </footer>
+</body>
+</html>
