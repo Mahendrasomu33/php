@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooking Classes and Tutorials</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f8f8;
+        }
+        nav{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: rgb(241, 199, 147);
+        height: 80px;
+        text-decoration: none;
+           
+        }
+        .ul2{
+        margin-top: 5px;
+        }
+        nav ul {
+            display: flex;
+            font-size: 18px;
+
+        }
+        nav ul li{
+            margin-left: 50px;
+            list-style: none;
+            
+        }
+        nav ul li a{
+            color: black;
+            text-decoration: none;
+        }
+        nav img{
+            height: 150px;
+            width: 250px;
+        }
+        .ul1{
+            margin-left: -20px;
+        }
+        nav button{
+            height: 30px;
+            width: 120px;
+            background-color: black;
+            color: white;
+            border-radius: 20px;
+            margin-top: -10px;
+        }
+        .dropdown{
+            background-color: rgb(241, 199, 147);
+            width:  100px;
+            z-index: 1;
+            display: none;
+            position: absolute;
+        }
+        .dropdown a{
+            display: block;
+            padding-bottom: 10px;
+        }
+        .navitem:hover .dropdown{
+            display: block;
+        }
+        nav a:hover{
+            font-size: 20px;
+        }
+        nav ion-icon{
+            font-size: 25px;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-style: italic;
+            font-size: 38px;
+        }
+        .section {
+            background: #fff;
+            margin: 20px 0;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section img {
+            max-width: 100%;
+            height: auto;
+        }
+        .section h2 {
+            margin-top: 0;
+        }
+        .section p {
+            margin: 10px 0;
+        }
+        .ebook-link, .qa-link {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .ebook-link:hover, .qa-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="ul1">
+            <li><a href="">Home</a></li>
+            <li class="navitem"><a href="">Recipies</a>
+                <div class="dropdown">
+                    <a href="">Recipies</a>
+                    <a href="">Tutorials</a>
+                    <a href="">live classes</a>
+                </div>
+            </li>
+            <li><a href="">Restaurants</a></li>
+        </ul>
+        <a href=""><img src="../images/logo.png" alt=""></a>
+        <ul class="ul2">
+            <li><a href="">Schedule</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Reviews</a></li>
+            <li><a href=""><button>Subscribe</button></a></li>
+            <li><a href=""><a href=""><ion-icon name="menu"></ion-icon></a></a></li>
+        </ul> 
+    </nav>
+    <h1>Cooking Classes and Tutorials</h1>
+    
+    <div class="section">
+        <h2>Online Cooking Classes</h2>
+        <p>Discover a variety of online cooking classes led by expert chefs. Whether you’re a beginner or a seasoned cook, our classes cater to all skill levels. Participate in live sessions or access recorded classes at your convenience.</p>
+        <img src="../images/cook1.jpeg" alt="Online Cooking Classes">
+        <p>Our online cooking classes cover a wide range of cuisines and techniques, from Italian pasta making to Japanese sushi preparation. Learn from the best in the comfort of your home.</p>
+    </div>
+
+    <div class="section">
+        <h2>Video Tutorials</h2>
+        <p>Our step-by-step video tutorials are designed to help you master various cooking techniques. Follow along as our chefs guide you through the process, ensuring you understand every detail.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Lh91QeRcVFQ?si=4LeZApDTGxAAIUy8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>With high-quality videos and clear instructions, you can learn everything from knife skills to advanced baking techniques. These tutorials are perfect for visual learners who prefer to see each step in action.</p>
+    </div>
+
+    <div class="section">
+        <h2>E-books and Guides</h2>
+        <p>Enhance your cooking knowledge with our downloadable e-books and guides. These resources are packed with recipes, tips, and techniques that will elevate your culinary skills.</p>
+        <img src="../images/cook2.webp" alt="E-books and Guides">
+        <p>From comprehensive recipe books to specialized guides on topics like bread baking and grilling, our e-books are valuable resources for any cooking enthusiast. <a class="ebook-link" href="#">Download your favorite e-book today</a> and start exploring new recipes.</p>
+    </div>
+
+    <div class="section">
+        <h2>Interactive Q&A</h2>
+        <p>Join our live Q&A sessions with chefs and food experts. These interactive sessions allow you to ask questions, get personalized advice, and learn from the experiences of others.</p>
+        <img src="../images/cook3.jpg" alt="Interactive Q&A">
+        <p>Our Q&A sessions are a great opportunity to connect with professionals in the culinary field and get answers to your burning questions. <a class="qa-link" href="#">Sign up for the next live session</a> and engage with our community of food lovers.</p>
+    </div>
+
+</body>
+</html>
