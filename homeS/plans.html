@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Plans</title>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+.plan {
+   height:50px; 
+   margin-top: 100px;
+}
+nav{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: rgb(241, 199, 147);
+        height: 80px;
+        text-decoration: none;
+           
+        }
+        .ul2{
+        margin-top: 5px;
+        }
+        nav ul {
+            display: flex;
+            font-size: 18px;
+
+        }
+        nav ul li{
+            margin-right: 50px;
+            list-style: none;
+            
+        }
+        nav ul li a{
+            color: black;
+            text-decoration: none;
+        }
+        nav img{
+            height: 150px;
+            width: 250px;
+        }
+        .ul1{
+            margin-left: -20px;
+        }
+        nav button{
+            height: 30px;
+            width: 120px;
+            background-color: black;
+            color: white;
+            border-radius: 20px;
+            margin-top: -10px;
+        }
+        .dropdown{
+            background-color: rgb(241, 199, 147);
+            width:  100px;
+            z-index: 1;
+            display: none;
+            position: absolute;
+        }
+        .dropdown a{
+            display: block;
+            padding-bottom: 10px;
+        }
+        .navitem:hover .dropdown{
+            display: block;
+        }
+        nav a:hover{
+            font-size: 20px;
+        }
+        nav ion-icon{
+            font-size: 25px;
+            cursor: pointer;
+        }
+#text{
+    background:black;
+    background-clip: text;
+    display: inline;
+    margin-left: 400px;
+    font-size: 40px;
+    color: transparent;
+  }
+  @keyframes animated{
+    to{
+        background-position-x: 161px;
+    }
+  }
+  .disney{
+    margin-left: 250px;
+    display: flex;
+    gap:500px;
+  }
+  .hotstar {
+    margin-left: 480px;
+    margin-top: 30px;
+    color:blueviolet;
+  }
+  .jio {
+    margin-left: 600px;
+    margin-top: 30px;
+    color:rgb(245, 16, 150);
+  }
+  .subscribe{
+    display: flex;
+    gap: 230px;
+    margin-left: 110px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+  }
+  
+  .subscribe .free {
+    width: 450px;
+    height: 700px;
+    border-radius: 30px;
+    display: inline-block; /* Changed from 'inline' to 'inline-block' for better alignment */
+    color: transparent;
+    background: linear-gradient(200deg, rgb(7, 7, 85), rgb(35, 5, 63),rgb(38, 7, 66), rgb(48, 7, 87));
+    background-size: 600% 600%; /* Increase the size to allow the gradient to move */
+    box-shadow: 0px 8px 10px rgb(24, 24, 85);
+}
+
+@keyframes anime {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+ .subscribe .free h1{
+    margin-left: 140px;
+    color:yellowgreen;
+  }
+ .subscribe .free img{
+    width:100px;
+    height:100px;
+    border-radius: 30%;
+    margin-left:160px;
+  }
+  .subscribe .free .free-sub {
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+  .subscribe .free .free-sub i{
+    font-size: 30px;
+  }
+  .subscribe .free .free-sub span{
+    margin-left: 30px;
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .subscribe .premium h1{
+    margin-left: 120px;
+    color:green;
+  }
+  .subscribe .premium img{
+    width:100px;
+    height:100px;
+    border-radius: 30%;
+    margin-left:170px;
+  }
+  .subscribe .premium h2{
+    margin-left: 180px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .subscribe .premium p {
+    font-size: 20px;
+    margin-left: 180px;
+  }
+  .subscribe .free button {
+    width:180px;
+    height:50px;
+    margin-top: 80px;
+    border-radius: 10px;
+    border: none;
+    background-color: green;
+    color:white;
+    margin-left: 130px;
+    font-size: 18px;
+    box-shadow: 0px 5px 10px rgb(54, 54, 54);
+  }
+  .subscribe .premium .premium-sub {
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+  .subscribe .premium .premium-sub i{
+    font-size: 30px;
+  }
+  .subscribe .premium .premium-sub span{
+    margin-left: 30px;
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .subscribe .premium button {
+    width:180px;
+    height:50px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+    margin-left: 130px;
+    font-size: 18px;
+    box-shadow: 0px 5px 10px rgb(54, 54, 54),rgb(50,50,50);
+  }
+  .subscribe .premium button:hover {
+    width:190px;
+    height:60px;
+    font-size: 20px;
+  }
+  .subscribe .premium {
+    width: 450px;
+    height: 700px;
+    border-radius: 30px;
+    display: inline-block; /* Changed from 'inline' to 'inline-block' for better alignment */
+    color: transparent;
+    background: linear-gradient(200deg, rgb(7, 7, 85),rgb(7, 7, 85),rgb(7, 7, 85));
+    background-size: 600% 600%; /* Increase the size to allow the gradient to move */
+    box-shadow: 0px 8px 10px rgb(24, 24, 85);
+}
+
+@keyframes anime {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+
+
+.subscribe2{
+    display: flex;
+    gap: 230px;
+    margin-left: 110px;
+    margin-top: 40px;
+  }
+ 
+  .subscribe2 .free {
+    width: 450px;
+    height: 700px;
+    border-radius: 30px;
+    display: inline-block; /* Changed from 'inline' to 'inline-block' for better alignment */
+    color: transparent;
+    background: linear-gradient(200deg,rgb(204, 32, 98),rgb(204, 32, 98),rgb(204, 32, 98),rgb(77, 72, 72),rgb(204, 32, 98),rgb(204, 32, 98),rgb(204, 32, 98),rgb(204, 32, 98));
+    background-size: 600% 600%; /* Increase the size to allow the gradient to move */
+    animation: anime 2s linear infinite;
+    box-shadow: 0px 8px 10px rgb(24, 24, 85);
+}
+
+@keyframes anime {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+ .subscribe2 .free h1{
+    margin-left: 150px;
+    color:yellowgreen;
+  }
+ .subscribe2 .free img{
+    width:100px;
+    height:100px;
+    border-radius: 10px;
+    margin-left:170px;
+  }
+  .subscribe2 .free .free-sub {
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+  .subscribe2 .free .free-sub i{
+    font-size: 30px;
+  }
+  .subscribe2 .free .free-sub span{
+    margin-left: 30px;
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .subscribe2 .free button {
+    width:180px;
+    height:50px;
+    margin-top: 80px;
+    border-radius: 10px;
+    border: none;
+    background-color: tomato;
+    color:white;
+    margin-left: 130px;
+    font-size: 18px;
+    box-shadow: 0px 5px 10px rgb(54, 54, 54);
+  }
+  .subscribe2 .premium h1{
+    margin-left: 120px;
+    color:goldenrod;
+  }
+  .subscribe2 .premium h1{
+    margin-left: 120px;
+    color:goldenrod;
+  }
+  .subscribe2 .premium img{
+    width:100px;
+    height:100px;
+    border-radius: 10px;
+    margin-left:180px;
+  }
+  .subscribe2 .premium h2{
+    margin-left: 190px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+  }
+  .subscribe2 .premium p {
+    font-size: 20px;
+    margin-left: 190px;
+  }
+  .subscribe2 .premium .premium-sub {
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+  .subscribe2 .premium .premium-sub i{
+    font-size: 30px;
+  }
+  .subscribe2 .premium .premium-sub span{
+    margin-left: 30px;
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .subscribe2 .premium button {
+    width:180px;
+    height:50px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+    margin-left: 130px;
+    font-size: 18px;
+    box-shadow: 0px 5px 10px rgb(54, 54, 54);
+  }
+  .subscribe2 .premium button:hover {
+    width:190px;
+    height:60px;
+    font-size: 20px;
+  }
+  .subscribe2 .premium {
+    width: 450px;
+    height: 700px;
+    border-radius: 30px;
+    display: inline-block; /* Changed from 'inline' to 'inline-block' for better alignment */
+    color: transparent;
+    background: linear-gradient(200deg,rgb(204, 32, 98),rgb(204, 32, 98),rgb(204, 32, 98),rgb(77, 72, 72),rgb(204, 32, 98),rgb(204, 32, 98),rgb(204, 32, 98),rgb(204, 32, 98));
+    background-size: 600% 600%; /* Increase the size to allow the gradient to move */
+    animation: anime 2s linear infinite;
+    box-shadow: 0px 8px 10px rgb(24, 24, 85);
+}
+
+@keyframes anime {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+.icon-container {
+    text-align: center;
+    margin-top: 0px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="ul1">
+            <li><a href="">Home</a></li>
+            <li class="navitem"><a href="">Recipies</a>
+                <div class="dropdown">
+                    <a href="">Recipies</a>
+                    <a href="">Tutorials</a>
+                    <a href="">live classes</a>
+                </div>
+            </li>
+            <li><a href="">Restaurants</a></li>
+        </ul>
+        <a href=""><img src="../images/logo.png" alt=""></a>
+        <ul class="ul2">
+            <li><a href="">Schedule</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Reviews</a></li>
+            <li><a href=""><button>Subscribe</button></a></li>
+            <div class="icon-container">
+                <li><ion-icon name="menu" id="triggerIcon"></ion-icon></li>
+            </div>
+        </ul> 
+    </nav>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <img src="https://via.placeholder.com/150" alt="Modal Image">
+            <p>This is your message!</p>
+            <button id="modalButton">Click Me!</button>
+        </div>
+    </div>
+   
+      <div class="plan"><h1 id="text">Choose Your Subscription Plan</h1></div>
+     
+      <h1 class="hotstar">FOR ONLINE CLASSES</h1>
+      
+    <div class="subscribe">
+        <div class="free">
+            <h1>Free Plans</h1>
+            <img src="../images/plane1.jfif">
+
+          <div class="free-sub">
+            <i class="fa-solid fa-check" style="color:white;"></i>
+            <span style="color:white;">Watch Only on one device</span>
+          </div>
+          <div class="free-sub">
+            <i class="fa-solid fa-check" style="color:white;"></i>
+            <span style="color:white;">Use Only On Mobile</span>
+            </div>
+            <div class="free-sub">
+                <i class="fa-solid fa-check" style="color:white;"></i>
+                <span style="color:white;">Adds On All Contents</span>
+            </div>
+            <div class="free-sub">
+                <i class="fa-solid fa-check" style="color:white;"></i>
+                <span style="color:white;">Standard 720p HD Video</span>
+            </div>
+            <div class="free-sub">
+                <i class="fa-solid fa-check" style="color:white;"></i>
+                <span style="color:white;">Standard Stereo Sound</span>
+            </div>
+            <div class="free-sub">
+                <i class="fa-solid fa-check" style="color:white;"></i>
+                <span style="color:white;">Access to basic features Only.</span>
+            </div>
+            <a href="https://www.udemy.com/" target="_self"><button>Get Free</button></a>
+        </div>
+        <div class="premium">
+            <h1>Premium Plans</h1>
+            <img src="../images/plane2.jpg">
+           <h2 style="color:white;">PRICE</h2>
+           <p style="color:white;">Rs.2999/-</p>
+            <div class="premium-sub">
+                <i class="fa-solid fa-check" style="color:white;"></i>
+                <span style="color:white;">Watch on four devices</span>
+              </div>
+              <div class="premium-sub">
+                <i class="fa-solid fa-check" style="color:white;"></i>
+                <span style="color:white;">Use On all devices at a time</span>
+            </div>
+                <div class="premium-sub">
+                    <i class="fa-solid fa-check" style="color:white;"></i>
+                    <span style="color:white;">No Adds On All Contents</span>
+                </div>
+                <div class="premium-sub">
+                    <i class="fa-solid fa-check" style="color:white;"></i>
+                    <span style="color:white;">Upto Full HD 1080p on Video</span>
+                </div>
+                <div class="premium-sub">
+                    <i class="fa-solid fa-check" style="color:white;"></i>
+                    <span style="color:white;">Upto Dolby Atmos</span>
+                </div>
+             <a href="https://www.udemy.com/" target="_self"><button>Buy Now</button></a>
+        </div>
+    </div>
+    <script>
+    document.getElementById('triggerIcon').addEventListener('click', function() {
+    document.getElementById('modal').style.display = 'block';
+});
+
+document.getElementById('closeModal').addEventListener('click', function() {
+    document.getElementById('modal').style.display = 'none';
+});
+
+document.getElementById('modalButton').addEventListener('click', function() {
+    alert('You clicked the button!');
+    document.getElementById('modal').style.display = 'none';
+});
+
+window.addEventListener('click', function(event) {
+    if (event.target === document.getElementById('modal')) {
+        document.getElementById('modal').style.display = 'none';
+    }
+});
+
+    </script>
+</body>
+</html>
