@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     <title>Cooking Classes and Tutorials</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             background-color: #f8f8f8;
-            padding: 20px;
+            padding: 1px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -32,7 +33,7 @@
 
         }
         nav ul li{
-            margin-left: 50px;
+            margin-right: 50px;
             list-style: none;
             
         }
@@ -45,7 +46,7 @@
             width: 250px;
         }
         .ul1{
-            margin-left: -20px;
+            margin-left: -10px;
         }
         nav button{
             height: 30px;
@@ -74,6 +75,7 @@
         }
         nav ion-icon{
             font-size: 25px;
+            cursor: pointer;
         }
         h1, h2 {
             color: #333;
@@ -155,6 +157,53 @@
             font-size: 18px;
             margin-top: 20px;
         }
+.icon-container {
+    text-align: center;
+    margin-top: 0px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
     </style>
 </head>
 <body>
@@ -176,9 +225,20 @@
             <li><a href="">Blog</a></li>
             <li><a href="">Reviews</a></li>
             <li><a href=""><button>Subscribe</button></a></li>
-            <li><a href=""><a href=""><ion-icon name="menu"></ion-icon></a></a></li>
+            <div class="icon-container">
+                <li><ion-icon name="menu" id="triggerIcon"></ion-icon></li>
+            </div>
         </ul> 
     </nav>
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <img src="../images/logo.png" alt="Modal Image" height="100px" width="100px">
+            <p>For Home Page Click Below Button</p>
+            <button id="modalButton">Click Me!</button>
+        </div>
+    </div>
+
     <div class="form-container">
         <h2>Sign Up for the Next Live Q&A Session</h2>
         <form id="signupForm">
@@ -200,6 +260,25 @@
                 document.getElementById('signupForm').reset();
             }
         });
+
+        document.getElementById('triggerIcon').addEventListener('click', function() {
+    document.getElementById('modal').style.display = 'block';
+});
+
+document.getElementById('closeModal').addEventListener('click', function() {
+    document.getElementById('modal').style.display = 'none';
+});
+
+document.getElementById('modalButton').addEventListener('click', function() {
+    alert('You clicked the button!');
+    document.getElementById('modal').style.display = 'none';
+});
+
+window.addEventListener('click', function(event) {
+    if (event.target === document.getElementById('modal')) {
+        document.getElementById('modal').style.display = 'none';
+    }
+});
     </script>
 
 </body>
